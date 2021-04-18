@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizzaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
+</head>
+
+<body>
+<style>
+    #menu-list
+    {
+        background-color: yellow;
+        color: black;
+        width: 200px;
+        border: none;
+    }
+
+    .newRow::after {
+	content: "";
+	clear: both;
+	display: table;
+    }
+
+    .cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    } 
+ 
+    div.card {
+    flex: 0 0 30%;
+	box-sizing: border-box;
+	color:black;
+	margin: 0.5rem .18em;
+	background-color: antiquewhite;
+	align-items: center;
+	font-size: medium;
+    }
+
+    .card img{
+	width:100px;
+	height: 80px;
+    }
+
+    .block2{
+	float: left;
+	width: 80%;
+	padding: 5px;
+	color: honeydew;
+	font-size: 25px;
+	font-family: cursive;
+    }
+
+    #add_toppings{
+	/* padding-left:30px; */
+	width:200px;
+	height:180px;
+	border: none;
+	background-color:#e2062c;
+	color:black;
+	font-size: 25px;
+	font-family: cursive;
+    }
+
+    .block1{
+	float: left;
+	width: 20%;
+	padding: 5px;
+    }
+
+  #add_item {
+	font-family: cursive;
+	font-size: 15px;
+	line-height: 20px;
+	width: 80%;
+	height: 50px;
+	color: #fff;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 205, 205);
+    outline: none;
+    }
+
+</style>
+
+    <div class="topnav">
+        <a class="active" href="#">Suhani's Pizzeria</a>
+        <div class="topnav-right">
+         <a href="#viewblock">View Menu</a>
+         <a href="#addTopings">Add Menu</a>
+        </div>
+    </div>
+
+    <div class="row" id="viewblock">
+        <div  class="img_div"> 
+            <img class="img-responsive"  src="pizza.png">
+        </div>
+      <!-- Add menu_div here and create button to call getmenu() -->
+      <div class="menu_div">
+          <button id="menu-list" onclick="getmenu()">Show Menu</button>
+          <p><br></p>
+          <div id="display_menu"></div>
+          
+      </div>
+      </div>
+    </div>
+    
+    <div class="newRow" id="addTopings">
+        <div class="block1">
+            <input id="addtoppings" placeholder="Type here to add toppings?"/></br>
+            <button id="add_toppings" onclick="add_item()">Recommend a new Pizza</button>
+            <div class="block2">
+                <div id="display_addedmenu">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+     <!-- Add display_addedmenu div here! -->
+    <div>
+        <img class="img-responsive"  src="topping.png">
+    </div>
+
+</body>
+</html>
